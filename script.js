@@ -19,11 +19,9 @@ input.addEventListener('keydown', function(event) {
         newItem.addEventListener('click', function() {
             newItem.classList.toggle('done');
         })
+        if (text != '') {
+            itemsContainer.append(newItem);
+        }
+        input.value = '';
     }
-
-    if (text != '') {
-        itemsContainer.append(newItem);
-    }
-
-    input.value = '';
 });
